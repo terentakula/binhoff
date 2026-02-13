@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-7 py-4 rounded-xl;
+    @media (max-width: 768px) {
+      @apply px-2 py-2 text-sm
+    }
+  }
+  .img {
+    @apply w-24 h-[480px] object-cover rounded-lg;
+    @media (max-width: 768px) {
+      @apply w-12 h-[240px]
+    }
+  }
+  .custom-navigation {
+    display: flex;
+    align-items: center;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    @apply p-4;
+    @media (max-width: 768px) {
+      @apply p-1
+    }
+  }
+  .bg {
+    background-image: url("../../public/image-9.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+  }
+  .box-wrapper{
+    @media (max-width: 768px) {
+      @apply flex-wrap
+    }
+  }
+  .box {
+    @apply p-5 lg:p-10 flex flex-col gap-4 items-start rounded-xl hover:bg-green-100 cursor-pointer;
+  }
+  .box h3 {
+    @apply font-medium;
+  }
+  .box img {
+    @apply w-16 grayscale;
+  }
+  .box p {
+    @apply opacity-80 leading-7;
+  }
+  .box button {
+    @apply text-green-500 font-medium;
+  }
+  .contact-bg {
+    background-image: url("../../public/image-9.jpg");
+    background-position: center;
+    background-size: fill;
+    height: 400px;
+    width: 100%;
+    filter: invert(10%);
+  }
+  .menu {
+    @apply flex flex-col gap-4 items-center font-medium
+  }
+  .icon {
+    @apply border border-black/10 p-4 rounded-full cursor-pointer
+  }
+}
+ .wrapper-list {
+  clip-path: inset(0% 0% 100% 0% round 0);
+ }
+
